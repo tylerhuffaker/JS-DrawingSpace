@@ -48,8 +48,10 @@ function start(){
 	       }
 	       function setType(){
 	           if(shtype == "ball"){
+	               println("Shape Changed to: Square");
 	               shtype = "square";
 	           }else{
+	               println("Shape Changed to: Ball");
 	               shtype = "ball";
 	           }
 	       }
