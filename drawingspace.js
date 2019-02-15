@@ -34,9 +34,26 @@ function start(){
 	            println("Clearing the ART board ");
 	            removeAll();
 	        }else if(e.keyCode == Keyboard.letter('s')){
-	            println("Changing shape");
-	            start();
+	            shapeChange();
 	        }
+	   function shapeChange(e){
+	       if(shtype == "ball"){
+	           mouseClickMethod(addSquare);
+               mouseDragMethod(addSquare);
+               setType();
+	       }else{
+	           mouseClickMethod(addBall);
+	           mouseDragMethod(addBall);
+	           setType();
+	       }
+	       function setType(){
+	           if(shtype == "ball"){
+	               shtype = "square";
+	           }else{
+	               shtype = "ball";
+	           }
+	       }
+	   }
 }
 
 }
