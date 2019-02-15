@@ -2,6 +2,7 @@
 // essentially this creates a cool little drawing board thing for an artist or somthing.
 function start(){
     keyDownMethod(keyDown);
+    println("Press 'S' to change shape");
     println("Press 'C' to clear ART board");
     var shtype = readLine("Choose Shape type: (square or ball): ");
     var rdmcol = readBoolean("Enable Random Color Mode? (True/False): ");
@@ -32,6 +33,9 @@ function start(){
 	        if(e.keyCode == Keyboard.letter('c')){
 	            println("Clearing the ART board ");
 	            removeAll();
+	        }else if(e.keyCode == Keyboard.letter('s')){
+	            println("Changing shape");
+	            start();
 	        }
 }
 
